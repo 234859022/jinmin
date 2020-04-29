@@ -6,7 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-
+/**
+ * @ClassName: Application
+ * @Description: TODO(描述)
+ * @author chenjinmin
+ * @date 2020-04-29 11:59:31
+ */
 
 @MapperScan("resources.mapper")
 @SpringBootApplication
