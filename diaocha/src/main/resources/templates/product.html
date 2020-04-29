@@ -1,0 +1,81 @@
+
+<div class="page-content">
+    <div class="widget-box">
+        <div class="widget-body">
+                    <div class="form-actions ">
+                    	<div style="float: left">
+							<label>产品名称</label>
+                            <input type="text" id="pro_name"  style="width:220px" placeholder="">
+                        	<label>分类</label>
+						</div>
+						<div  style="float: left">
+							<select class="col-xs-12 col-sm-6" style="width: 179px" id="pro_type">
+								<option value="">--请选择--</option>
+							</select> &nbsp;
+						</div>
+                        <button type="button" id="searchbtn" class="btn btn-sm btn-success">
+                            	查询
+                            <i class="icon-arrow-right icon-on-right bigger-110"></i>
+                        </button>
+                        <button type="button" onclick="addPro()" class="btn btn-sm btn-success">
+                            	新增
+                            <i class="icon-arrow-right icon-on-right bigger-110"></i>
+                        </button>
+                    </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+
+            <table id="grid-table-pro"></table>
+
+            <div id="grid-pager-pro"></div>
+
+            <script type="text/javascript">
+                var $path_base = "/";//this will be used in gritter alerts containing images
+            </script>
+
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+<script>
+    $('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#parkTimeBeginTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#parkTimeEndTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#leaveTimeBeginTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#leaveTimeEndTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+</script>

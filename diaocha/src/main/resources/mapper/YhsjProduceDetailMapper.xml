@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjProduceDetailMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjProduceDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="produce_detail_id" jdbcType="VARCHAR" property="produceDetailId" />
+    <result column="produce_detail_spec_id" jdbcType="VARCHAR" property="produceDetailSpecId" />
+    <result column="produce_detail_spec_name" jdbcType="VARCHAR" property="produceDetailSpecName" />
+    <result column="produce_detail_user_id" jdbcType="VARCHAR" property="produceDetailUserId" />
+    <result column="produce_detail_user_name" jdbcType="VARCHAR" property="produceDetailUserName" />
+    <result column="produce_detail_color_type" jdbcType="VARCHAR" property="produceDetailColorType" />
+    <result column="produce_detail_machine_id" jdbcType="VARCHAR" property="produceDetailMachineId" />
+    <result column="produce_detail_machine_name" jdbcType="VARCHAR" property="produceDetailMachineName" />
+    <result column="produce_detail_qie" jdbcType="VARCHAR" property="produceDetailQie" />
+    <result column="produce_detail_ge" jdbcType="VARCHAR" property="produceDetailGe" />
+    <result column="produce_detail_sl_zl" jdbcType="VARCHAR" property="produceDetailSlZl" />
+    <result column="produce_detail_cszl" jdbcType="VARCHAR" property="produceDetailCszl" />
+    <result column="produce_detail_cl" jdbcType="VARCHAR" property="produceDetailCl" />
+    <result column="produce_detail_xb" jdbcType="VARCHAR" property="produceDetailXb" />
+    <result column="produce_detail_db" jdbcType="VARCHAR" property="produceDetailDb" />
+    <result column="produce_detail_xie" jdbcType="VARCHAR" property="produceDetailXie" />
+    <result column="produce_detail_cd" jdbcType="VARCHAR" property="produceDetailCd" />
+    <result column="produce_detail_pl" jdbcType="VARCHAR" property="produceDetailPl" />
+    <result column="produce_detail_create_time" jdbcType="TIMESTAMP" property="produceDetailCreateTime" />
+    <result column="produce_detail_create_user_id" jdbcType="VARCHAR" property="produceDetailCreateUserId" />
+    <result column="produce_detail_month" jdbcType="VARCHAR" property="produceDetailMonth" />
+    <result column="produce_detail_day" jdbcType="VARCHAR" property="produceDetailDay" />
+  </resultMap>
+  
+  <select id="dynamicSqlQuery" parameterType="java.lang.String" resultType="java.util.Map">
+      ${sql}
+   </select>
+  
+  <select id="dynamicSqlByCount"  parameterType="java.lang.String"  resultType="java.lang.Integer">
+	  ${sql}
+  </select>
+  <delete id="deleteProduceDetailBatch" parameterType="java.util.List">
+  	delete from yhsj_produce_detail where produce_detail_id in 
+  	<foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+    </foreach>
+  </delete>
+  
+  <delete id="deleteProduceDetail" parameterType="java.lang.String">
+  	delete from yhsj_produce_detail where produce_detail_id =#{id}
+  </delete>
+  
+</mapper>

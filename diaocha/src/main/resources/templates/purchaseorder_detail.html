@@ -1,0 +1,84 @@
+<div class="page-content">
+	<div class="page-header" id="header">
+		采购单详情
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="purchaseOrderForm">
+				<input type="hidden" name="purchaseId" id="purchaseId"/>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseNo" style="width:25%;">采购编号</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseNo" id="purchaseNo" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseStatus" style="width:25%;">采购状态</label>
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="purchaseStatus" name="purchaseStatus" style="width:100%;">
+							<option value="1">未处理</option>
+							<option value="2">已处理</option>
+							<option value="3">已完成</option>
+							<option value="4">已生成发货单</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseCreateUserName" style="width:25%;">下单人</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseCreateUserName" id="purchaseCreateUserName" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseAddress" style="width:25%;">下单地址</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseAddress" id="purchaseAddress" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseCreateTime" style="width:25%;">下单时间</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseCreateTime" id="purchaseCreateTime" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseRemark" style="width:25%;">备注</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseRemark" id="purchaseRemark" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:100%;margin-bottom: px;">
+					<div class="col-sm-12">
+						<table id="grid-table-purchaseorderdetail"></table>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="printbtn">打印预览<i class="ace-icon fa fa-check bigger-110"></i></button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">返回<i class="ace-icon fa fa-undo bigger-110"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script rc="../static/plugin/ajaxfileupload/ajaxfileupload.js"></script>
+<script src="../static/js/purchaseorder_detail.js"></script>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Build-Jdk: 11.0.2
+Implementation-Title: diaocha
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.nwpak
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/diaocha/
+Created-By: Maven Integration for Eclipse
+

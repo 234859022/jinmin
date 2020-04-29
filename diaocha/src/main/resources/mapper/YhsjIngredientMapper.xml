@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjIngredientMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjIngredient">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ingredient_id" jdbcType="VARCHAR" property="ingredientId" />
+    <result column="ingredient_name" jdbcType="VARCHAR" property="ingredientName" />
+    <result column="ingredient_remark" jdbcType="VARCHAR" property="ingredientRemark" />
+    <result column="ingredient_create_time" jdbcType="TIMESTAMP" property="ingredientCreateTime" />
+    <result column="ingredient_is_delete" jdbcType="INTEGER" property="ingredientIsDelete" />
+  </resultMap>
+  
+  <select id="dynamicSqlQuery" parameterType="java.lang.String" resultType="java.util.Map">
+      ${sql}
+   </select>
+  
+  <select id="dynamicSqlByCount"  parameterType="java.lang.String"  resultType="java.lang.Integer">
+	  ${sql}
+  </select>
+  <delete id="deleteIngredientBatch" parameterType="java.util.List">
+  	delete from yhsj_ingredient where ingredient_id in 
+  	<foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+    </foreach>
+  </delete>
+  
+  <delete id="deleteIngredient" parameterType="java.lang.String">
+  	delete from yhsj_ingredient where ingredient_id =#{id}
+  </delete>
+  
+</mapper>

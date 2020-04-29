@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发货单</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 15px
+    }
+    .box{
+        width: 375px;
+        background-color: #f7f7f7;
+        padding-bottom: 20px
+    }
+    .title{
+        text-align: center;
+        padding:20px;
+    }
+    .contain{
+        width: 95%;
+        border-radius: 10px;
+        border: 1px solid #333;
+        background-color: #fff;
+        margin: 0 auto
+    }
+    .contain>div{
+        padding: 15px 25px;
+        border-bottom: 1px solid #333
+    }
+    .contain>div:nth-last-child(1){
+        border-bottom: none
+    }
+    .list span{
+        margin-right: 10px
+    }
+    div,span{
+        line-height: 30px
+    }
+    .paylist{
+        font-size: 0;
+        margin-top: 10px
+    }
+    .paylist span{
+        display: inline-block;
+        width: calc(32% - 2px);
+        border: 1px solid #333;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        position: relative;
+    }
+    .paylist span:not(:nth-last-child(1)){
+        margin-right: 2%
+    }
+    .active::after{
+        content: "";
+        position: absolute;
+        border: 10px solid transparent;
+        border-top-color: #666;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        bottom: -10px;
+        left: -10px;
+    }
+</style>
+<body>
+    <div class="box">
+    	<div id="printdetail">
+        <div class="title">永恒塑胶生产明细</div>
+        <div class="contain">
+            <div class="title2" id="machineName">
+            </div>
+            <div class="title2" id="purchaseNo">
+            </div>
+            <div class="list" id="detaillist">
+                <!-- <div class="item">
+                    <div>
+                        <span>永恒塑料A</span>
+                        <span>规格</span>
+                        <span>红色</span>
+                        <span>100*118(70+15)</span>
+                    </div>
+                    <div>
+                        <span>价格：1100</span>
+                        <span>数量：3</span>
+                        <span>总价：300</span>
+                    </div>
+                </div>	 -->
+            </div>
+            <div class="pay">
+                <div>配料</div>
+                <div class="paylist" id="ingrediient">
+                    <!-- <span class="active">支付宝</span> -->
+                </div>
+            </div>
+            <div class="msg">
+                <div id="taskStartTime"></div>
+                <div id="taskEndTime"></div>
+                <div id="taskStatus"></div>
+            </div>
+        </div>
+        </div>
+	    <div class="clearfix form-actions">
+			<div class="col-md-offset-3 col-md-9">
+				<button type="button" class="btn btn-info" id="printbtn2">打印<i class="ace-icon fa fa-check bigger-110"></i></button>
+				&nbsp; &nbsp;
+				<button type="button" class="btn" id="cancelbtn2">返回<i class="ace-icon fa fa-undo bigger-110"></i></button>
+			</div>
+	    </div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/js/machine_task_print.js"></script>

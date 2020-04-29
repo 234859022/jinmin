@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjUserMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="user_real_name" jdbcType="VARCHAR" property="userRealName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="user_weixin_unionid" jdbcType="VARCHAR" property="userWeixinUnionid" />
+    <result column="user_weixin_openId" jdbcType="VARCHAR" property="userWeixinOpenid" />
+    <result column="user_reg_channel" jdbcType="INTEGER" property="userRegChannel" />
+    <result column="user_head_pic" jdbcType="VARCHAR" property="userHeadPic" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="user_content" jdbcType="VARCHAR" property="userContent" />
+    <result column="user_create_time" jdbcType="TIMESTAMP" property="userCreateTime" />
+    <result column="user_is_delete" jdbcType="INTEGER" property="userIsDelete" />
+    <result column="user_invite_code" jdbcType="VARCHAR" property="userInviteCode" />
+    <result column="user_myinvite_code" jdbcType="VARCHAR" property="userMyinviteCode" />
+    <result column="user_identity" jdbcType="VARCHAR" property="userIdentity" />
+    <result column="user_status" jdbcType="VARCHAR" property="userStatus" />
+    <result column="user_parent_id" jdbcType="VARCHAR" property="userParentId" />
+    <result column="user_parent_name" jdbcType="VARCHAR" property="userParentName" />
+    <result column="user_parent_headpic" jdbcType="VARCHAR" property="userParentHeadpic" />
+    <result column="user_address_detail" jdbcType="VARCHAR" property="userAddressDetail" />
+    <result column="user_lat" jdbcType="DOUBLE" property="userLat" />
+    <result column="user_lnt" jdbcType="DOUBLE" property="userLnt" />
+    <result column="user_xcx_openId" jdbcType="VARCHAR" property="userXcxOpenid" />
+    <result column="user_level" jdbcType="INTEGER" property="userLevel" />
+    <result column="user_channel" jdbcType="INTEGER" property="userChannel" />
+  </resultMap>
+  
+  <update id="changeNickName"  parameterType="com.sanposs.project.model.YhsjUser">
+
+       update yhsj_user set
+    <if test="userName != null">
+      user_name = #{userName,jdbcType=VARCHAR}
+    </if>
+    where
+    <if test="userPhone != null">
+       user_phone = #{userPhone,jdbcType=VARCHAR}
+    </if>
+  </update>
+  <update id="changeMobile"  parameterType="com.sanposs.project.model.YhsjUser">
+
+       update yhsj_user set user_phone = #{userPhone,jdbcType=VARCHAR}  where  user_id =#{userId}
+  </update>
+  
+  <select id="findByPhone" parameterType="com.sanposs.project.model.YhsjUser" resultMap="BaseResultMap">
+      SELECT
+      *
+      FROM
+      yhsj_user
+      where 1=1
+      <if test="userPhone != null">
+        AND user_phone =#{userPhone}
+      </if>
+
+      ORDER BY
+    user_create_time DESC
+      limit 0,1
+
+  </select>
+
+    <select id="findByUserid" parameterType="com.sanposs.project.model.YhsjUser" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM
+        yhsj_user
+        where 1=1
+        <if test="userId != null">
+            AND user_id =#{userId}
+        </if>
+
+        ORDER BY
+        user_create_time DESC
+        limit 0,1
+
+    </select>
+
+    <select id="findByUnionid" parameterType="com.sanposs.project.model.YhsjUser" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM
+        yhsj_user
+        where 1=1
+        <if test="userWeixinUnionid != null">
+            AND user_weixin_unionid =#{userWeixinUnionid}
+        </if>
+
+        ORDER BY
+        user_create_time DESC
+        limit 0,1
+
+    </select>
+</mapper>

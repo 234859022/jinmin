@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjProductMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjProduct">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="pro_id" jdbcType="VARCHAR" property="proId" />
+    <result column="pro_name" jdbcType="VARCHAR" property="proName" />
+    <result column="pro_price" jdbcType="DECIMAL" property="proPrice" />
+    <result column="pro_sale_price" jdbcType="DECIMAL" property="proSalePrice" />
+    <result column="pro_min_img_url" jdbcType="VARCHAR" property="proMinImgUrl" />
+    <result column="pro_max_img_url" jdbcType="VARCHAR" property="proMaxImgUrl" />
+    <result column="pro_num" jdbcType="INTEGER" property="proNum" />
+    <result column="pro_type_parent" jdbcType="VARCHAR" property="proTypeParent" />
+    <result column="pro_type" jdbcType="VARCHAR" property="proType" />
+    <result column="pro_is_show" jdbcType="INTEGER" property="proIsShow" />
+    <result column="pro_is_delete" jdbcType="INTEGER" property="proIsDelete" />
+    <result column="factory_area" jdbcType="VARCHAR" property="factoryArea" />
+    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="pro_sort" jdbcType="VARCHAR" property="proSort" />
+    <result column="pro_month_count" jdbcType="INTEGER" property="proMonthCount" />
+    <result column="pro_evaluate_count" jdbcType="INTEGER" property="proEvaluateCount" />
+    <result column="pro_collections" jdbcType="INTEGER" property="proCollections" />
+    <result column="pro_points" jdbcType="INTEGER" property="proPoints" />
+    <result column="pro_detail_detail_remark" jdbcType="VARCHAR" property="proDetailDetailRemark" />
+    <result column="pro_is_member" jdbcType="INTEGER" property="proIsMember" />
+    <result column="pro_profit" jdbcType="DECIMAL" property="proProfit" />
+    <result column="pro_summary" jdbcType="VARCHAR" property="proSummary" />
+    <result column="pro_total_count" jdbcType="INTEGER" property="proTotalCount" />
+    <result column="pro_detail_img" jdbcType="VARCHAR" property="proDetailImg" />
+    <result column="pro_is_nominate" jdbcType="INTEGER" property="proIsNominate" />
+    <result column="template_id" jdbcType="VARCHAR" property="templateId" />
+    <result column="pro_weight" jdbcType="VARCHAR" property="proWeight" />
+  </resultMap>
+</mapper>

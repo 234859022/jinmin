@@ -1,0 +1,149 @@
+<div class="page-content">
+	<div class="top_title">
+		生产明细信息
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="produceDetailinfo">	
+				<input type="hidden" name="produceDetailId" id="produceDetailId">		
+				<div>
+					<div class="flex j_end a_center inpBox">
+						生产日期<input name="produceDetailMonth" id="produceDetailMonth">月<input
+							name="produceDetailDay" id="produceDetailDay">日
+					</div>
+					<div class="flex a_center inpBox">
+						客户<input name="produceDetailUserName" id="produceDetailUserName">颜色<input
+							name="produceDetailColorType" id="produceDetailColorType">(光板/花棍)<input
+							name="produceDetailMachineName" id="produceDetailMachineName">号机
+					</div>
+					<div class="flex a_center inpBox">
+						规格<input name="produceDetailSpecName" id="produceDetailSpecName">切<input
+							name="produceDetailQie" id="produceDetailQie">个<input
+							name="produceDetailGe" id="produceDetailGe">数量及重量<input
+							name="produceDetailSlZl" id="produceDetailSlZl">
+					</div>
+					<div class="flex a_center inpBox">
+						吹塑重量<input name="produceDetailCszl" id="produceDetailCszl">克 &nbsp;&nbsp;产量<input name="produceDetailCl" id="produceDetailCl">公斤
+					</div>
+					<div class="flex a_center inpBox">
+						小包<input name="produceDetailXb" id="produceDetailXb">克 &nbsp;&nbsp;大包<input name="produceDetailDb" id="produceDetailDb">
+					</div>
+					<div class="flex a_center inpBox">
+						写<input name="produceDetailXie" id="produceDetailXie">&nbsp;&nbsp;冲刀<input name="produceDetailCd" id="produceDetailCd">
+					</div>
+					<div>配料:</div>
+					<div>
+						<textarea class="inpArea" name="produceDetailPl" id="produceDetailPl"></textarea>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">
+							保存
+							<i class="ace-icon fa fa-check bigger-110"></i>
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="resetbtn">
+							重置
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">
+							取消
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+	<style>
+		.flex{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex
+}
+.flexc{
+  flex-direction: column
+}
+.flexible{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+.j_center{
+  -webkit-justify-content: center;
+  justify-content: center
+}
+.j_between{
+  -webkit-justify-content: space-between;
+  justify-content: space-between
+}
+.j_end{
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end
+}
+.a_center{
+  -webkit-align-items: center;
+  align-items: center
+}
+.a_between{
+  -webkit-align-content: space-between;
+  align-content: space-between
+}
+.a_end{
+  -webkit-align-items: flex-end;
+  align-items: flex-end
+}
+.inpBox{
+	height: 50px;
+}
+#produceDetailinfo{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 20px
+}
+#produceDetailinfo input{
+	border: none;
+	border-bottom: 1px solid #000;
+	outline:none;
+	padding-left: 5px
+}
+#produceDetailinfo *{
+	font-size: 15px
+}
+.top_title{
+	text-align: center;
+	line-height: 50px;
+	font-size: 28px;
+}
+.inpArea{
+	width: 100%;
+	height: 60px;
+	margin-bottom: 20px
+}
+	</style>
+</div>
+<!-- /.page-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/js/produce_detail_modify.js"></script>
+<script type="text/javascript">
+
+</script>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjProceductTypeMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjProceductType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="type_id" jdbcType="VARCHAR" property="typeId" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="type_parent" jdbcType="VARCHAR" property="typeParent" />
+    <result column="type_create_date" jdbcType="TIMESTAMP" property="typeCreateDate" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="type_delete_flag" jdbcType="VARCHAR" property="typeDeleteFlag" />
+    <result column="type_log_img" jdbcType="VARCHAR" property="typeLogImg" />
+    <result column="type_show_sort" jdbcType="VARCHAR" property="typeShowSort" />
+  </resultMap>
+</mapper>

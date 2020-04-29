@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box
+}
+.flex{
+display: -webkit-box;
+display: -webkit-flex;
+display: flex
+}
+.flexc{
+flex-direction: column
+}
+.flexible{
+-webkit-box-flex: 1;
+-moz-box-flex: 1;
+box-flex: 1;
+-ms-flex: 1;
+flex: 1
+}
+.j_center{
+-webkit-justify-content: center;
+justify-content: center
+}
+.j_between{
+-webkit-justify-content: space-between;
+justify-content: space-between
+}
+.j_end{
+-webkit-justify-content: flex-end;
+justify-content: flex-end
+}
+.a_center{
+-webkit-align-items: center;
+align-items: center
+}
+.a_between{
+-webkit-align-content: space-between;
+align-content: space-between
+}
+.a_end{
+-webkit-align-items: flex-end;
+align-items: flex-end
+}
+.outer{
+    padding: 10px;
+}
+.box1{
+    font-weight: 700;
+    font-size: 10px
+}
+.box2{
+    padding: 10px;
+}
+.box3{
+    height: 20px;
+    padding: 0 5px;
+}
+.box3 div{
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999
+}
+.box4{
+    position: relative;
+}
+.box4::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    border-top: 2px solid #aaa
+}
+.box4::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left:0;
+    height: 100%;
+    border-left: 2px solid #aaa
+}
+.tbItem{
+    position: relative;
+    height: 40px;
+    white-space: nowrap;
+    width: 10%;
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.tbItem::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-right: 2px solid #aaa
+}
+.tbItem::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    border-bottom: 2px solid #aaa
+}
+.tbItem:nth-last-child(4){
+    width: 40%;
+}
+.tbItem.double{
+    width: 30%
+}
+.inputBox{
+    border: none;
+    width: 100%;
+    line-height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    outline: none
+}
+.btn{
+    height: 30px;
+    width: 60px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #ccc;
+    border: 1px solid #999;
+    font-size:12px
+}
+.btn:nth-child(1){
+    color: #fff;
+    background-color: #2683F5;
+    border-color: #2683F5
+}

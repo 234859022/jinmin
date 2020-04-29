@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjEnclosureMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjEnclosure">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="enclosure_id" jdbcType="VARCHAR" property="enclosureId" />
+    <result column="enclosure_url" jdbcType="VARCHAR" property="enclosureUrl" />
+    <result column="enclosure_name" jdbcType="VARCHAR" property="enclosureName" />
+    <result column="enclosure_suffix" jdbcType="VARCHAR" property="enclosureSuffix" />
+    <result column="enclosure_time" jdbcType="TIMESTAMP" property="enclosureTime" />
+    <result column="enclosure_sort" jdbcType="VARCHAR" property="enclosureSort" />
+    <result column="enclosure_type" jdbcType="INTEGER" property="enclosureType" />
+    <result column="enclosure_parent_id" jdbcType="VARCHAR" property="enclosureParentId" />
+  </resultMap>
+</mapper>

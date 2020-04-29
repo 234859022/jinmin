@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjDeliveryOrderMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjDeliveryOrder">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="delivery_id" jdbcType="VARCHAR" property="deliveryId" />
+    <result column="delivery_no" jdbcType="VARCHAR" property="deliveryNo" />
+    <result column="purchase_no" jdbcType="VARCHAR" property="purchaseNo" />
+    <result column="delivery_status" jdbcType="INTEGER" property="deliveryStatus" />
+    <result column="delivery_total_price" jdbcType="DECIMAL" property="deliveryTotalPrice" />
+    <result column="delivery_total_weight" jdbcType="DECIMAL" property="deliveryTotalWeight" />
+    <result column="delivery_user_id" jdbcType="VARCHAR" property="deliveryUserId" />
+    <result column="delivery_user_name" jdbcType="VARCHAR" property="deliveryUserName" />
+    <result column="delivery_create_time" jdbcType="TIMESTAMP" property="deliveryCreateTime" />
+    <result column="delivery_phone" jdbcType="VARCHAR" property="deliveryPhone" />
+    <result column="delivery_address" jdbcType="VARCHAR" property="deliveryAddress" />
+    <result column="delivery_remark" jdbcType="VARCHAR" property="deliveryRemark" />
+    <result column="delivery_is_delete" jdbcType="INTEGER" property="deliveryIsDelete" />
+    <result column="delivery_update_time" jdbcType="TIMESTAMP" property="deliveryUpdateTime" />
+    <result column="delivery_operation_id" jdbcType="VARCHAR" property="deliveryOperationId" />
+    <result column="delivery_operation_name" jdbcType="VARCHAR" property="deliveryOperationName" />
+    <result column="delivery_pay_type" jdbcType="VARCHAR" property="deliveryPayType" />
+    <result column="delivery_zfb_amount" jdbcType="DECIMAL" property="deliveryZfbAmount" />
+    <result column="delivery_wx_amount" jdbcType="DECIMAL" property="deliveryWxAmount" />
+    <result column="delivery_yhk_amount" jdbcType="DECIMAL" property="deliveryYhkAmount" />
+  </resultMap>
+  <select id="dynamicSqlQuery" parameterType="java.lang.String" resultType="java.util.Map">
+      ${sql}
+   </select>
+   
+   <select id="dynamicSqlByCount"  parameterType="java.lang.String"  resultType="java.lang.Integer">
+	  ${sql}
+  </select>
+</mapper>

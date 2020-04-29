@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjProductTpMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjProductTp">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="tp_id" jdbcType="VARCHAR" property="tpId" />
+    <result column="tp_name" jdbcType="VARCHAR" property="tpName" />
+    <result column="tp_sale_price" jdbcType="DECIMAL" property="tpSalePrice" />
+    <result column="tp_price" jdbcType="DECIMAL" property="tpPrice" />
+    <result column="tp_num" jdbcType="INTEGER" property="tpNum" />
+    <result column="tp_cost_price" jdbcType="DECIMAL" property="tpCostPrice" />
+    <result column="tp_weight" jdbcType="VARCHAR" property="tpWeight" />
+    <result column="tp_no" jdbcType="VARCHAR" property="tpNo" />
+    <result column="tp_create_time" jdbcType="TIMESTAMP" property="tpCreateTime" />
+    <result column="tp_create_user" jdbcType="VARCHAR" property="tpCreateUser" />
+    <result column="tp_remark" jdbcType="VARCHAR" property="tpRemark" />
+    <result column="pro_id" jdbcType="VARCHAR" property="proId" />
+    <result column="tp_sort" jdbcType="INTEGER" property="tpSort" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjUserAddressMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjUserAddress">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="address_id" jdbcType="VARCHAR" property="addressId" />
+    <result column="address_privince" jdbcType="VARCHAR" property="addressPrivince" />
+    <result column="address_city" jdbcType="VARCHAR" property="addressCity" />
+    <result column="address_town" jdbcType="VARCHAR" property="addressTown" />
+    <result column="address_detail" jdbcType="VARCHAR" property="addressDetail" />
+    <result column="address_create_time" jdbcType="TIMESTAMP" property="addressCreateTime" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_is_default" jdbcType="INTEGER" property="userIsDefault" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+  </resultMap>
+</mapper>

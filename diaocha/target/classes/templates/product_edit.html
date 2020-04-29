@@ -1,0 +1,172 @@
+<style>
+.addimg{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    background-color: #ddd;
+    color: #999;
+    margin-right: 20px
+}
+.addimg_file{
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+}
+.Img_outer{
+    position: relative;
+    display: inline-block;
+}
+.Img_delete{
+    position: absolute;
+    font-size: 14px;
+    line-height: 15px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #ccc;
+    top: -7px;
+    right: -7px;
+    border-radius: 50%;
+    display: none;
+    text-align:center
+}
+.img_above{
+    width: 100px;
+    margin-right: 10px;
+}
+</style>
+<div class="page-content">
+	<div class="page-header" id="header">
+		产品信息
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="productForm">
+				<input type="hidden" name="proId" id="proId"/>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proName" style="width:25%;">商品名称</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proName" id="proName" style="width:100%;"/>
+					</div>
+				</div>	
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proSummary" style="width:25%;">商品简介</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proSummary" id="proSummary" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proPrice" style="width:25%;">产品价格</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proPrice" id="proPrice" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proSalePrice" style="width:25%;">会员价格</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proSalePrice" id="proSalePrice" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proNum" style="width:25%;">产品库存</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proNum" id="proNum" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proWeight" style="width:25%;">产品重量</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proWeight" id="proWeight" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proType" style="width:25%;">产品分类</label>
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="proType" name="proType" style="width:100%;">
+						</select>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proIsShow" style="width:25%;">首页显示</label>
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="proIsShow" name="proIsShow" style="width:100%;">
+							<option value="1">是</option>
+							<option value="0">否</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proIsShow" style="width:25%;">产品logo图片</label>
+					<div class="col-sm-9">
+						<div class="addimg">+</div>
+						<input type="file" class="addimg_file" id="fileActivityImg" name="fileActivityImg" accept="image/*" />
+						<p class="help-block">支持JPG、PNG、JPEG、GIF、BMP、PIC格式，最佳比例1:1.</p>
+						<div id="minImg">
+						
+         				</div>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proIsShow" style="width:25%;">详情图片</label>
+					<div class="col-sm-9">
+						<div class="addimg">+</div>
+						<input type="file" class="addimg_file" id="fileActivityImg2" accept="image/*"/>
+						<p class="help-block">支持JPG、PNG、JPEG、GIF、BMP、PIC格式</p>
+						<div id="detailImg">
+						
+         				</div>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="proDetailDetailRemark" style="width:25%;">产品详情</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="proDetailDetailRemark" id="proDetailDetailRemark" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="passid" style="width:25%;"></label>
+					<div class="col-sm-9">
+						<button type="button" class="btn btn-info " id="addBtn">新增规格<i class="ace-icon fa fa-check bigger-110"></i></button>
+						<button type="button" class="btn btn-info " id="delBtn">删除规格<i class="ace-icon fa fa-check bigger-110"></i></button>
+					</div>
+				</div>
+				<div class="form-group" style="width:100%;margin-bottom: px;">
+					<div class="col-sm-12">
+						<table id="grid-table-editpro"></table>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">保存<i class="ace-icon fa fa-check bigger-110"></i></button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">取消<i class="ace-icon fa fa-undo bigger-110"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script rc="../static/plugin/ajaxfileupload/ajaxfileupload.js"></script>
+<script src="../static/js/product_edit.js"></script>

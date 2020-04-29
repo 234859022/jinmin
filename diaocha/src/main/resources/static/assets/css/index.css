@@ -1,0 +1,10 @@
+.iframecontent{
+    width: 100%;
+    height: 100%;
+    border-width:0px ;
+}
+
+.detailWin div{
+    width: 990px;
+}
+.nav-search{right:auto;left:60px;top:auto;bottom:11px}.message-form{border:1px solid #ddd;border-top:0;padding-top:22px}@media only screen and (max-width:480px){.message-form{padding-left:16px;padding-right:16px}}.message-form .form-actions{margin-bottom:0}.message-form .wysiwyg-editor{overflow:auto;min-height:150px;max-height:250px;height:auto}.btn-send-message{position:relative;top:6px}.btn-back-message-list{color:#777}.btn-back-message-list:hover{color:#478fca;text-decoration:none}.message-condensed .message-item{padding-top:8px;padding-bottom:9px}.message-condensed .message-navbar,.message-condensed .message-footer{padding-top:7px;padding-bottom:7px}.message-condensed .messagebar-item-left,.message-condensed .messagebar-item-right{bottom:9px}.message-condensed .message-navbar .nav-search{bottom:7px}

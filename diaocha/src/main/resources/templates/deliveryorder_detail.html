@@ -1,0 +1,120 @@
+<div class="page-content">
+	<div class="page-header" id="header">
+		发货单详情
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="deliveryOrderForm">
+				<input type="hidden" name="deliveryId" id="deliveryId"/>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryNo" style="width:25%;">发货编号</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryNo" id="deliveryNo" style="width:100%;"/>
+					</div>
+				</div>	
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="purchaseNo" style="width:25%;">采购编号</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="purchaseNo" id="purchaseNo" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryStatus" style="width:25%;">发货状态</label>
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="deliveryStatus" name="deliveryStatus" style="width:100%;">
+							<option value="1">已发货</option>
+							<option value="2">已收货</option>
+							<option value="3">已收款</option>
+							<option value="4">已完成</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryTotalPrice" style="width:25%;">总价</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryTotalPrice" id="deliveryTotalPrice" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryTotalWeight" style="width:25%;">总重(kg)</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryTotalWeight" id="deliveryTotalWeight" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryUserName" style="width:25%;">收货人名称</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryUserName" id="deliveryUserName" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryAddress" style="width:25%;">收货地址</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryAddress" id="deliveryAddress" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryCreateTime" style="width:25%;">发货时间</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryCreateTime" id="deliveryCreateTime" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryPayType" style="width:25%;">支付方式</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryPayType" id="deliveryPayType" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryZfbAmount" style="width:25%;">支付宝金额</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryZfbAmount" id="deliveryZfbAmount" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryWxAmount" style="width:25%;">微信金额</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryWxAmount" id="deliveryWxAmount" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="deliveryYhkAmount" style="width:25%;">银行卡金额</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="deliveryYhkAmount" id="deliveryYhkAmount" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:100%;margin-bottom: px;">
+					<div class="col-sm-12">
+						<table id="grid-table-deliveryorderdetail"></table>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="printbtn">打印预览<i class="ace-icon fa fa-check bigger-110"></i></button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">返回<i class="ace-icon fa fa-undo bigger-110"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script rc="../static/plugin/ajaxfileupload/ajaxfileupload.js"></script>
+<script src="../static/js/deliveryorder_detail.js"></script>

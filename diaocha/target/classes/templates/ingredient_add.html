@@ -1,0 +1,83 @@
+<div class="page-content">
+	<div class="page-header">
+		配料信息
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="ingredientinfo">	
+				<input type="hidden" name="ingredientId" id="ingredientId">						
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right"
+						for="ingredientName" style="width:25%;">配料名称</label>
+
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" placeholder="" name="ingredientName" id="ingredientName" style="width:100%;"/>
+					</div>
+				</div>
+
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right"
+						for="ingredientRemark" style="width:25%;">配料备注</label>
+
+					<div class="col-sm-9">
+					 	<textarea rows="9" cols="" id="ingredientRemark" name="ingredientRemark" class="col-xs-10 col-sm-5"  style="width:100%;">
+					 	</textarea>
+					</div>
+				</div>
+				<!-- <div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right"
+						for="ingredientIsDelete" style="width:25%;">是否删除</label>
+
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="ingredientIsDelete" name="ingredientIsDelete" style="width:100%;">
+							<option value=0>否</option>
+							<option value=1>是</option>
+						</select>
+					</div>
+				</div> -->
+				
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">
+							保存
+							<i class="ace-icon fa fa-check bigger-110"></i>
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="resetbtn">
+							重置
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">
+							取消
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+						</button>
+						
+						
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.page-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/js/ingredient_add.js"></script>
+<script type="text/javascript">
+
+</script>

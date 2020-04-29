@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 选择器格式为：html #layui_layer_skin文件夹名stylecss，这一点非常重要 */
+html #layui_layer_skinyourskinstylecss {
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+
+body .layer-ext-yourskin {
+	width: 62%;
+	background: none;
+	border: 0;
+	border-radius:10px;
+}
+
+body .layer-ext-yourskin .layui-layer-title {
+	/* display: none; */
+	height:50px;
+	line-height:50px;
+	border-radius:10px 10px 0 0;
+	background:#fff;
+	border-bottom:0;
+	color:#fff;
+}
+body .layui-layer-dialog .layui-layer-content {
+	background:#fff;
+	color: #333;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 4%;
+	padding-bottom: 8%;
+}
+body .layui-layer-page .layui-layer-content {
+	background:#fff;
+	color: #333;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 4%;
+	padding-bottom: 8%;
+}
+body .layer-ext-yourskin .layui-layer-botton {
+	height: 100px;
+	background: #03F;
+}
+
+body .layer-ext-yourskin .layui-layer-padding {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	background:#fff;
+	/* border-radius: 10px 10px 0 0; */
+}
+/*用于layer.msg()*/
+body .layer-ext-yourskin-msg .layui-layer-padding {
+	background: rgba(0, 0, 0, 0.5);
+	color:#fff;
+}
+body .layer-ext-yourskin .layui-layer-content .layui-layer-ico {
+	display:none;
+}
+
+body .layer-ext-yourskin .layui-layer-content .layui-layer-ico:hover {
+	display:block;
+}
+
+body .layer-ext-yourskin .ch1 {
+	color: #ff8027;
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+}
+
+body .layer-ext-yourskin .cp {
+	color: #999;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+body .layer-ext-yourskin .layui-layer-ico0 {
+	background: none
+}
+
+body .layer-ext-yourskin .layui-layer-ico1 {
+	background: none
+}
+
+body .layer-ext-yourskin .layui-layer-ico2 {
+	background: none
+}
+
+body .layer-ext-yourskin .layui-layer-ico3 {
+	background: none
+}
+
+body .layer-ext-yourskin .layui-layer-btn {
+	background: #f3f3f3;
+	border-radius: 0 0 10px 10px;
+	padding: 3% 0;
+}
+
+body .layer-ext-yourskin .layui-layer-btn a {
+	background: #0582ff;
+	font-size: 16px;
+	border-radius: 5px;
+	font-weight: normal;
+	margin: 5px 10px;
+	padding: 1% 6%;
+}
+body .layui-layer-ico {
+	background:url(closebtn_blue.png) no-repeat center center;
+}
+body .layui-layer-setwin .layui-layer-close1 {
+	width:24px;
+	height:24px;
+	margin-top: 4%;
+	margin-right: 5%;
+}
+body .layui-layer-setwin .layui-layer-close1 {
+	background-position:0 0;
+}
+/*open*/
+body .layer-ext-yourskin .layui-layer-setwin {
+	/* display: none; */
+	right:18px;
+	top:20px;
+}
+body #sub-frame-error {
+	background-color:#fff;
+}

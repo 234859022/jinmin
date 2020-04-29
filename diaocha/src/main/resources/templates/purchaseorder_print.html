@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/assets/css/purchaseorder_print.css">
+	
+</head>
+<body>
+    <div id="app">
+        <div class="outer" id="printdetail">
+            <div class="flex flexc j_center" id="printdetail">
+                <div class="flex a_center j_center box1">永恒塑胶采购清单</div>
+                <div class="flex a_center j_between box2">
+                    <div>{{purchaseNo}}</div>
+                    <div>{{purchaseCreateTime}}</div>
+                </div>
+                <div class="flex a_center box3">
+                    <div>收货人:{{purchaseCreateUserName}}</div>
+                    <div>电话:{{purchasePhone}}</div>
+                    <div class="flexible">{{purchaseAddress}}</div>
+                </div>
+                <div class="flex a_center box3">
+                    <div>{{purchaseRemark}}</div>
+                </div>
+                <div class="box4">
+                    <div class="flex a_center">
+                        <div class="tbItem flex a_center j_center">商品</div>
+                        <div class="tbItem flex a_center j_center">规格</div>
+                        <div class="tbItem flex a_center j_center">标准重量</div>
+                        <div class="tbItem flex a_center j_center"></div>
+                        <div class="tbItem flex a_center j_center">单价</div>
+                        <div class="tbItem flex a_center j_center">合计重量</div>
+                        <div class="tbItem flex a_center j_center">金额</div>
+                    </div>
+                    <div class="flex a_center" v-for="(item,index) in table">
+                        <div class="tbItem flex a_center j_center">{{item.productName}}</div>
+                        <div class="tbItem flex a_center j_center">{{item.tpName}}</div>
+                        <div class="tbItem flex a_center j_center">{{item.productWeight}}</div>
+                        <div class="tbItem flex a_center j_center"><input type="text" v-model="item.moreInfo" placeholder="格式(重量*数量,重量*数量……)(保留一位小数)" class="inputBox" v-on:blur="totalP(index)"></div>
+                        <div class="tbItem flex a_center j_center">{{item.productPrice}}</div>
+                        <div class="tbItem flex a_center j_center">{{item.totalWeight}}</div>
+                        <div class="tbItem flex a_center j_center">{{item.totalPrice}}</div>
+                    </div>
+                    <div class="flex a_center">
+                        <div class="tbItem flex a_center j_center double">合计：</div>
+                        <div class="tbItem flex a_center j_center"></div>
+                        <div class="tbItem flex a_center j_center"></div>
+                        <div class="tbItem flex a_center j_center"></div>
+                        <div class="tbItem flex a_center j_center">{{purchaseSumprice}}</div>
+                    </div>
+                </div>
+                <div class="flex a_center box3">
+                    <div style="width:120px">招商热线：</div>
+                    <div style="width:120px">售后服务：</div>
+                    <div class="flexible" style="text-align: right">白联:随货同行/红联:购货单位/黄联:财务</div>
+                </div>
+                <div class="flex a_center box3">
+                    <div>签收人：</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="flex a_center j_center btn" id="printbtn2">打印</div>
+            <div class="flex a_center j_center btn" id="cancelbtn2">取消</div>
+        </div>
+    </div>
+</body>
+<script src="../static/assets/js/vue.js"></script>
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script>
+	var purchase_id=getUrlParam("purchase_id");
+	var app = new Vue({
+        el:'#app',
+        data:{
+        	purchaseNo:'页号',
+        	purchaseCreateTime:'2019-05-19',
+        	purchaseCreateUserName:'姓名',
+        	purchasePhone:'',
+            purchaseAddress:'详细地址',
+            purchaseRemark:'备注',
+            purchaseSumprice:'',
+            table:[
+                
+            ]
+        },
+        methods: {
+            totalP:function(index){
+                let that = this;
+                let obj = that.table[index];
+                let totalWeight = new Number(0);
+                let totalPrice = new Number(0);
+                let allPrice = new Number(0);
+                let weightList = new Array();
+                if(obj.moreInfo.indexOf(',')==-1){
+                    weightList = obj.moreInfo.split('，');
+                }else{
+                    weightList = obj.moreInfo.split(',');
+                }
+                console.log(weightList);
+                for(let i in weightList){
+                    weightList[i] = (Number(weightList[i].split('*')[0]).toFixed(1))*(Number(weightList[i].split('*')[1]).toFixed(1))
+                    totalWeight+=Number(weightList[i])
+                }
+                totalPrice = (totalWeight*Number(obj.productPrice)).toFixed(1);
+                obj.totalWeight = totalWeight;
+                obj.totalPrice = totalPrice;
+                that.table[index] = obj;
+                let list = that.table;
+                for(let i in list){
+                    if(list[i].totalPrice){
+                        allPrice+=Number(list[i].totalPrice)
+                    }                   
+                }
+                that.purchaseSumprice = allPrice
+            }
+        },
+        mounted:function(){
+        	var that = this;
+	         $.ajax({ 
+	    	 	url: "/yhsj/purchase/order/getPurchaseOrderDetail",
+	    	 	data:{
+	    	 		purchase_id:purchase_id
+	    	 	},
+	    	 	async:false,
+	    	 	dataType:'json',
+                 type:'get',
+	    	 	success: function(result){
+	    	 		if(result.code==200){
+	    	 			if(result.data){
+	    	 				var initdata=result.data;
+	    	 				var main = initdata.main;
+			 		    	var detail = initdata.detail;
+					    	that.purchaseNo = main.purchaseNo;
+			 		    	that.purchaseCreateUserName = main.purchaseCreateUserName;
+			 		    	that.purchasePhone = main.purchasePhone;
+			 		    	that.purchaseAddress = main.purchaseAddress;
+			 		    	that.purchaseRemark = main.purchaseRemark;
+			 				if(main.purchaseCreateTime){
+			 		    		that.purchaseCreateTime = (new Date(main.purchaseCreateTime)).Format("yyyy-MM-dd HH:mm:ss");
+			 				}
+			 				for(var j=0;j<detail.length;j++){
+			 					var item = detail[j];
+			 					var tableList = {
+                                	productName:item.productName,
+                                    tpName:item.tpName,
+                                    productWeight:item.productWeight,
+                                    moreInfo:'',          
+                                    productPrice:item.productPrice,
+                                    totalWeight:new Number(0),
+                                   totalPrice:new Number(0)
+                                 };
+			 					that.table.push(tableList);
+			 				}
+	    	 			}
+	    	 		}
+	    	 	}
+	    	 })
+        }
+    })
+</script>
+<script src="../static/js/purchaseorder_print.js"></script>
+</html>

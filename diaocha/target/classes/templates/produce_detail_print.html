@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生产明细单</title>
+    <style>
+.flex{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex
+}
+.flexc{
+  flex-direction: column
+}
+.flexible{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+.j_center{
+  -webkit-justify-content: center;
+  justify-content: center
+}
+.j_between{
+  -webkit-justify-content: space-between;
+  justify-content: space-between
+}
+.j_end{
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end
+}
+.a_center{
+  -webkit-align-items: center;
+  align-items: center
+}
+.a_between{
+  -webkit-align-content: space-between;
+  align-content: space-between
+}
+.a_end{
+  -webkit-align-items: flex-end;
+  align-items: flex-end
+}
+.inpBox{
+	height: 50px;
+}
+#produceDetailinfo{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 20px
+}
+.showinput{
+	border: none;
+	border-bottom: 1px solid #000;
+	outline:none;
+	padding-left: 5px;
+	display: inline;
+	height: 23px;
+}
+#produceDetailinfo *{
+	font-size: 15px
+}
+.top_title{
+	text-align: center;
+	line-height: 50px;
+	font-size: 28px;
+}
+.inpArea{
+	width: 100%;
+	height: 60px;
+	margin-bottom: 20px
+}
+	</style>
+</head>
+<body style="background: white;">
+    <form class="form-horizontal" id="produceDetailinfo">	
+			<input type="hidden" name="produceDetailId" id="produceDetailId">		
+			<div id="printcontent">
+				<div class="top_title" style="font-size: 28px;">
+					生产明细信息
+				</div>
+				<div class="flex j_end a_center inpBox">
+					生产日期<div id="produceDetailMonth" class="showinput" style="width:100px;"></div>月<div
+						id="produceDetailDay" class="showinput" style="width:100px;"></div>日
+				</div>
+				<div class="flex a_center inpBox">
+					客户&nbsp;<div id="produceDetailUserName" class="showinput" style="width:160px;"></div>&nbsp;颜色&nbsp;<div style="width:160px;" class="showinput" id="produceDetailColorType"></div>&nbsp;(光板/花棍)&nbsp;<div style="width:160px;" class="showinput" id="produceDetailMachineName"></div>号机
+				</div>
+				<div class="flex a_center inpBox">
+					规格&nbsp;<div id="produceDetailSpecName" class="showinput" style="width:130px;"></div>&nbsp;
+					切&nbsp;<div id="produceDetailQie" class="showinput" style="width:120px;"></div>&nbsp;
+					个&nbsp;<div id="produceDetailGe" class="showinput" style="width:120px;"></div>&nbsp;
+					数量及重量&nbsp;<div id="produceDetailSlZl" class="showinput" style="width:120px;"></div>
+				</div>
+				<div class="flex a_center inpBox">
+					吹塑重量&nbsp;<div id="produceDetailCszl" class="showinput" style="width:120px;"></div>克 &nbsp;产量&nbsp;&nbsp;<div id="produceDetailCl" class="showinput" style="width:120px;"></div>公斤
+				</div>
+				<div class="flex a_center inpBox">
+					小包&nbsp;<div id="produceDetailXb" class="showinput" style="width:150px;"></div>克 &nbsp;&nbsp;大包<div id="produceDetailDb" class="showinput" style="width:150px;"></div>
+				</div>
+				<div class="flex a_center inpBox">
+					写&nbsp;<div id="produceDetailXie" class="showinput" style="width:180px;"></div>&nbsp;&nbsp;&nbsp;冲刀&nbsp;<div id="produceDetailCd" class="showinput" style="width:150px;"></div>
+				</div>
+				<div>配料:</div>
+				<div>
+					<div class="inpArea" id="produceDetailPl"></div>
+				</div>
+			</div>
+			<div class="clearfix form-actions">
+				<div class="col-md-offset-3 col-md-9">
+					<button type="button" class="btn btn-info" id="submitbtn">
+						打印
+						<i class="ace-icon fa fa-check bigger-110"></i>
+					</button>
+					&nbsp; &nbsp; &nbsp;
+					<button type="button" class="btn" id="cancelbtn">
+						取消
+						<i class="ace-icon fa fa-undo bigger-110"></i>
+					</button>
+				</div>
+			</div>
+	</form>
+</body>
+</html>
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/js/produce_detail_print.js"></script>

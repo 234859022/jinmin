@@ -1,0 +1,89 @@
+
+<div class="page-content">
+    <div class="widget-box">
+        <div class="widget-body">
+                    <div class="form-actions ">
+                    	<div style="float: left">
+							<label>采购编号</label>
+                            <input type="text" id="purchase_no"  style="width:220px" placeholder="">
+							<label>状态:</label>
+						</div>
+						<div style="float: left">
+							<select class="col-xs-12 col-sm-6" style="width: 179px" id="purchase_status">
+								<option value="">--请选择--</option>
+								<option value="1">未处理</option>
+								<option value="2">已处理</option>
+								<option value="3">已完成</option>
+								<option value="4">已生产发货单</option>
+							</select>
+							<label>发货时间:</label>
+						</div>
+						<div style="float: left">
+                       		<input type="date" id="btime" style="width:220px">-<input type="date" id="etime" style="width:220px">&nbsp;
+						</div>
+                        <button type="button" id="searchbtn" class="btn btn-sm btn-success">
+                            	查询
+                            <i class="icon-arrow-right icon-on-right bigger-110"></i>
+                        </button>
+                        <!-- <button type="button" onclick="addProType()" class="btn btn-sm btn-success">
+                            	新增
+                            <i class="icon-arrow-right icon-on-right bigger-110"></i>
+                        </button> -->
+                    </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+
+            <table id="grid-table-purchaseorder"></table>
+
+            <div id="grid-pager-purchaseorder"></div>
+
+            <script type="text/javascript">
+                var $path_base = "/";//this will be used in gritter alerts containing images
+            </script>
+
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+<script>
+    $('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#parkTimeBeginTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#parkTimeEndTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#leaveTimeBeginTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+    $('#leaveTimeEndTime').timepicker({
+        minuteStep: 1,
+        showSeconds: true,
+        showMeridian: false
+    }).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+</script>

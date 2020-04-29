@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjPurchaseOrderMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjPurchaseOrder">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="purchase_id" jdbcType="VARCHAR" property="purchaseId" />
+    <result column="purchase_no" jdbcType="VARCHAR" property="purchaseNo" />
+    <result column="purchase_status" jdbcType="INTEGER" property="purchaseStatus" />
+    <result column="purchase_create_user_id" jdbcType="VARCHAR" property="purchaseCreateUserId" />
+    <result column="purchase_create_user_name" jdbcType="VARCHAR" property="purchaseCreateUserName" />
+    <result column="purchase_create_time" jdbcType="TIMESTAMP" property="purchaseCreateTime" />
+    <result column="purchase_phone" jdbcType="VARCHAR" property="purchasePhone" />
+    <result column="purchase_address" jdbcType="VARCHAR" property="purchaseAddress" />
+    <result column="purchase_remark" jdbcType="VARCHAR" property="purchaseRemark" />
+    <result column="purchase_is_delete" jdbcType="INTEGER" property="purchaseIsDelete" />
+    <result column="purchase_update_time" jdbcType="TIMESTAMP" property="purchaseUpdateTime" />
+    <result column="purchase_address_id" jdbcType="VARCHAR" property="purchaseAddressId" />
+    <result column="purchase_sumprice" jdbcType="DECIMAL" property="purchaseSumprice" />
+  </resultMap>
+</mapper>

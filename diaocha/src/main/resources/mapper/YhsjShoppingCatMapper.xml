@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanposs.project.dao.YhsjShoppingCatMapper">
+  <resultMap id="BaseResultMap" type="com.sanposs.project.model.YhsjShoppingCat">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shopping_cat_id" jdbcType="VARCHAR" property="shoppingCatId" />
+    <result column="pro_id" jdbcType="VARCHAR" property="proId" />
+    <result column="pro_name" jdbcType="VARCHAR" property="proName" />
+    <result column="pro_price" jdbcType="DECIMAL" property="proPrice" />
+    <result column="pro_num" jdbcType="INTEGER" property="proNum" />
+    <result column="pro_weight" jdbcType="DECIMAL" property="proWeight" />
+    <result column="scale_id" jdbcType="VARCHAR" property="scaleId" />
+    <result column="scale_label" jdbcType="VARCHAR" property="scaleLabel" />
+    <result column="shopping_cat_state" jdbcType="INTEGER" property="shoppingCatState" />
+    <result column="shopping_cat_create_time" jdbcType="TIMESTAMP" property="shoppingCatCreateTime" />
+    <result column="shopping_cat_create_user_id" jdbcType="VARCHAR" property="shoppingCatCreateUserId" />
+    <result column="company_id" jdbcType="VARCHAR" property="companyId" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="produce_detail_id" jdbcType="VARCHAR" property="produceDetailId" />
+  </resultMap>
+  
+  <select id="dynamicSqlQuery" parameterType="java.lang.String" resultType="java.util.Map">
+      ${sql}
+   </select>
+  
+  <select id="dynamicSqlByCount"  parameterType="java.lang.String"  resultType="java.lang.Integer">
+	  ${sql}
+  </select>
+  
+  <delete id="deleteShopCatBatch" parameterType="java.util.List">
+  	delete from yhsj_shopping_cat where shopping_cat_id in 
+  	<foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+    </foreach>
+  </delete>
+</mapper>
