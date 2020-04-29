@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>demo.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+   <script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="ajaxfileupload.js"></script>
+
+  </head>
+  
+  <body>
+    <p><input type="file" id="file1" name="file" /></p>
+    <input type="button" value="上传" />
+    <p><img id="img1" alt="上传成功啦" src="" /></p>
+  </body>
+</html>
+ <script type="text/javascript">
+        $(function () {
+            $(":button").click(function () {
+                ajaxFileUpload();
+            })
+        })
+        function ajaxFileUpload(){
+	//开始上传文件时显示一个图片,文件上传完成将图片隐藏
+		$("#loading").ajaxStart(function(){$(this).show();}).ajaxComplete(function(){$(this).hide();});
+			 if($("#myBlogImage").val()==null||$("#myBlogImage").val()==""){
+	   	     alert('请选择图片');
+	    	 return;
+		}
+		var strFilter=".jpeg|.gif|.jpg|.png|.bmp|.pic|";
+		if($("#myBlogImage").val().indexOf(".")>-1)
+		{
+	   		var p = $("#myBlogImage").val().lastIndexOf(".");
+	    	var strPostfix= $("#myBlogImage").val().substring(p,$("#myBlogImage").val().length) + '|';        
+	    	strPostfix = strPostfix.toLowerCase();
+	    	if(strFilter.indexOf(strPostfix)>-1)
+	    	{
+	    	}else{
+	    	    alert('图片类型出错，请重新选择！');
+	     	    return;
+	   	    }
+		} 
+		//执行上传文件操作的函数
+		$.ajaxFileUpload({
+	    //处理文件上传操作的服务器端地址(可以传参数,已亲测可用)
+	    	url:'../../uploadManager/fileUpload.sc?childPath=menu&control=myfiles',
+			secureuri : false, //是否启用安全提交,默认为false 
+			fileElementId : 'myBlogImage', //文件选择框的id属性
+			dataType : 'text', //服务器返回的格式,可以是json或xml等
+			success : function(data, status) { //服务器响应成功时的处理函数
+				data = data.replace("<PRE>", ''); //ajaxFileUpload会对服务器响应回来的text内容加上<pre>text</pre>前后缀
+				data = data.replace("</PRE>", '');
+				data = data.replace("<pre>", '');
+				data = data.replace("</pre>", ''); //本例中设定上传文件完毕后,服务端会返回给前台[0`filepath]
+				var index = data.indexOf(">");
+				if(index >= 0){
+					data = data.substring(index + 1);
+				}
+				if (data.substring(0, 1) == 0) { //0表示上传成功(后跟上传后的文件路径),1表示失败(后跟失败描述)
+					$("#menuIcon").val(data.substring(2));
+					$("#ewmResult").html(
+							"<img src='" + data.substring(2)
+									+ "' width='100' height='100' />");
+				} else {
+					alert(data);
+				}
+			},
+			error : function(data, status, e) { //服务器响应失败时的处理函数
+				alert('图片上传失败，请重试！');
+			}
+		});
+	}
+    </script>

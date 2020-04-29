@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" href="skin/yourskin/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="layer.js"></script>
+
+  </head>
+  
+  <body>
+    <input id="btn1" type="button" value="alert" style="wdith:100px;height:30px;">
+    <input id="btn2" type="button" value="open" style="wdith:100px;height:30px;">
+    <input id="btn3" type="button" value="msg" style="wdith:100px;height:30px;">
+    <input id="btn4" type="button" value="load" style="wdith:100px;height:30px;">
+    <input id="btn5" type="button" value="confirm" style="wdith:100px;height:30px;">
+    <input id="btn6" type="button" value="tips" style="wdith:100px;height:30px;">
+    <input id="btn7" type="button" value="iframe" style="wdith:100px;height:30px;">
+  </body>
+</html>
+<script type="text/javascript">
+	$(function(){
+			layer.config({
+				extend:['skin/yourskin/style.css'],
+				skin:'layer-ext-yourskin'
+			});
+		$("#btn1").click(function(){
+			layer.alert("关键词不能少于两个字关键词不能少于两个字关键词不能少于关键词不能少于两个字关键词不能少于两个字关键词不能少于两个字关键词不能少于两个字两个字");
+		});	
+		$("#btn2").click(function(){
+			layer.open({
+				type: 1, 
+				  content: '传入任意的文本或html',
+				  btn: ['确定', '取消','测试','测试']
+			});
+		});	
+		$("#btn3").click(function(){
+			layer.msg('不开心。。', {
+				icon: 5,
+				time:70000
+			});
+		});	
+		$("#btn4").click(function(){
+			layer.load(1); //风格1的加载
+		});	
+		$("#btn5").click(function(){
+			layer.confirm('is not?', {icon: 3, title:'提示'}, function(index){
+				  //do something
+				  
+				  layer.close(index);
+				});
+		});	
+		$("#btn6").click(function(){
+			layer.tips('在上面', '#btn6', {
+				  tips: 1
+				 });
+		});	
+		$("#btn7").click(function(){
+			layer.open({
+				type:2, 
+			  content:'demo.html',
+			  btn: ['确定', '取消','测试','测试']
+			});	
+		});	
+	});
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>南王管理后台</title>
+  <div th:replace="head"></div>
+  <script  type="text/javascript" th:src="@{../static/js/navicator.js}"></script>
+</head>
+<body>
+<div class="navbar navbar-default" id="navbar">
+  <div class="navbar-container" id="navbar-container">
+    <div class="navbar-header pull-left">
+      <a href="index" class="navbar-brand">
+        <small>
+          <i class="icon-leaf"></i>
+          南王考核管理系统
+        </small>
+      </a><!-- /.brand -->
+    </div><!-- /.navbar-header -->
+    <div th:replace="top"></div>
+  </div><!-- /.container -->
+</div>
+
+<!-- /.中间的 -->
+<div class="main-container" id="main-container">
+  <script type="text/javascript">
+      try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+  </script>
+
+  <div class="main-container-inner">
+    <a class="menu-toggler" id="menu-toggler" href="#">
+      <span class="menu-text"></span>
+    </a>
+
+    <div class="sidebar" id="sidebar">
+      <script type="text/javascript">
+          try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+      </script>
+
+      <div th:replace="index_menucontent"></div>
+    </div>
+
+    <!-- /.中间右侧的 -->
+    <div class="main-content">
+
+      <div th:replace="breadcrumb"></div>
+      <div id ="divpagecontent" class="page-content">
+
+        <iframe  id="ifpagecontent" class="iframecontent" th:replace="summary"></iframe>
+      </div>
+    </div><!-- /.main-content -->
+
+  </div><!-- /.main-container-inner -->
+</div><!-- /.main-container -->
+<!--<script type="text/javascript">-->
+    <!--window.jQuery || document.write("<script type='text/javascript' th:src='@{../static/assets/js/jquery-2.0.3.min.js}'>"+"<"+"/script>");-->
+<!--</script>-->
+<script  type="text/javascript" th:src="@{../static/assets/js/bootstrap.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/typeahead-bs2.min.js}"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script  type="text/javascript" th:src="@{../static/assets/js/excanvas.min.js}"></script>
+<![endif]-->
+
+<script type="text/javascript"  th:src="@{../static/assets/js/jquery-ui-1.10.3.custom.min.js}"></script>
+<script type="text/javascript"  th:src="@{../static/assets/js/jquery.ui.touch-punch.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/jquery.slimscroll.min.js}"></script>
+<script type="text/javascript"  th:src="@{../static/assets/js/jquery.easy-pie-chart.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/jquery.sparkline.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/flot/jquery.flot.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/flot/jquery.flot.pie.min.js}"></script>
+<script type="text/javascript"  th:src="@{../static/assets/js/flot/jquery.flot.resize.min.js}"></script>
+<script type="text/javascript"  th:src="@{../static/assets/js/ace-elements.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/ace.min.js}"></script>
+<script  type="text/javascript" th:src="@{../static/assets/js/layer-v1.9.3/layer.js}"></script>
+
+<script type="text/javascript"  th:src="@{../static/js/advertisement.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/etype.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/equestion.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/answer.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/euser.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/admin.js}"></script>
+<script type="text/javascript"  th:src="@{../static/js/euseranswer_one.js}"></script>
+</body>
+</html>

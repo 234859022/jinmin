@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanwang.project.dao.EUserMapper">
+  <resultMap id="BaseResultMap" type="com.nanwang.project.model.EUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_post" jdbcType="VARCHAR" property="userPost" />
+    <result column="user_create_time" jdbcType="TIMESTAMP" property="userCreateTime" />
+    <result column="user_sex" jdbcType="INTEGER" property="userSex" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="user_remark" jdbcType="VARCHAR" property="userRemark" />
+    <result column="user_create_user" jdbcType="VARCHAR" property="userCreateUser" />
+    <result column="user_entry_time" jdbcType="VARCHAR" property="userEntryTime" />
+    <result column="user_total_score" jdbcType="DECIMAL" property="userTotalScore" />
+    <result column="user_all_score" jdbcType="DECIMAL" property="userAllScore" />
+    <result column="user_count" jdbcType="INTEGER" property="userCount" />
+    <result column="user_status" jdbcType="INTEGER" property="userStatus" />
+  </resultMap>
+</mapper>

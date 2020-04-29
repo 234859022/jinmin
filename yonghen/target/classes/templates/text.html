@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>管理后台</title>
+        <div th:replace="head"></div>
+</head>
+
+<body>
+<div class="navbar navbar-default" id="navbar">
+        <script type="text/javascript">
+            try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+        </script>
+
+        <div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left">
+                        <a href="#" class="navbar-brand">
+                                <small>
+                                        <i class="icon-leaf"></i>
+                                        后台管理系统
+                                </small>
+                        </a><!-- /.brand -->
+                </div><!-- /.navbar-header -->
+                <div th:replace="top"></div>
+        </div><!-- /.container -->
+</div>
+
+<!-- /.中间的 -->
+<div class="main-container" id="main-container">
+        <script type="text/javascript">
+            try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+        </script>
+
+        <div class="main-container-inner">
+                <a class="menu-toggler" id="menu-toggler" href="#">
+                        <span class="menu-text"></span>
+                </a>
+
+                <div class="sidebar" id="sidebar">
+                        <script type="text/javascript">
+                            try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+                        </script>
+
+                        <div th:replace="index_menucontent"></div>
+                        <!-- /.nav-list -->
+
+                        <div class="sidebar-collapse" id="sidebar-collapse">
+                                <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                        </div>
+
+                        <script type="text/javascript">
+                            try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+                        </script>
+                </div>
+
+                <!-- /.中间右侧的 -->
+                <div class="main-content">
+
+                        <div th:replace="breadcrumb"></div>
+
+                        <div class="page-content">
+
+                                <div class="row">
+                                        <div class="col-xs-12">
+                                                <!-- PAGE CONTENT BEGINS -->
+
+                                                <table id="grid-table"></table>
+
+                                                <div id="grid-pager"></div>
+
+                                                <script type="text/javascript">
+                                                    var $path_base = "/";//this will be used in gritter alerts containing images
+                                                </script>
+
+                                                <!-- PAGE CONTENT ENDS -->
+                                        </div><!-- /.col -->
+                                </div><!-- /.row -->
+                        </div><!-- /.page-content -->
+                </div>
+        </div><!-- /.main-container-inner -->
+</div><!-- /.main-container -->
+<script src="../static/js/locklist.js"></script>
+</body>
+</html>

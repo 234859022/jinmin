@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanwang.project.dao.EAnswerDetailMapper">
+  <resultMap id="BaseResultMap" type="com.nanwang.project.model.EAnswerDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="detail_id" jdbcType="VARCHAR" property="detailId" />
+    <result column="detail_questionid" jdbcType="VARCHAR" property="detailQuestionid" />
+    <result column="detail_answerid" jdbcType="VARCHAR" property="detailAnswerid" />
+    <result column="detail_questiontitle" jdbcType="VARCHAR" property="detailQuestiontitle" />
+    <result column="detail_questionweightd" jdbcType="INTEGER" property="detailQuestionweightd" />
+    <result column="detail_select" jdbcType="INTEGER" property="detailSelect" />
+    <result column="detail_score" jdbcType="NUMERIC" property="detailScore" />
+    <result column="detail_questiontype" jdbcType="VARCHAR" property="detailQuestiontype" />
+    <result column="detail_questiontypeid" jdbcType="VARCHAR" property="detailQuestiontypeid" />
+    <result column="detail_remark" jdbcType="VARCHAR" property="detailRemark" />
+    <result column="detail_create_time" jdbcType="TIMESTAMP" property="detailCreateTime" />
+  </resultMap>
+</mapper>

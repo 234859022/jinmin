@@ -1,0 +1,84 @@
+<div class="page-content">
+	<div class="page-header" id="adheader"></div>
+	<!-- /.page-header -->
+	<div class="row">
+	    <form class="form-horizontal" id="advertisementForm">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+				<input type="hidden" name="answerId" id="answerId" />
+				<input type="hidden" name="answerUserid" id="answerUserid" />
+				<input type="hidden" id="answerDate" name="answerDate">
+				<input type="hidden" name="answerTotalScore" id="answerTotalScore" />
+				<input type="hidden" name="useranswerid" id="useranswerid" />
+				<input type="hidden" name="answerType" id="answerType" />
+                <div class="form-group" style="margin-bottom: 5px;">
+					<label class="col-sm-1 control-label no-padding-right" for="answerUsername">被评价人</label>
+					<div class="col-sm-1">
+						 <input type="text" name="answerUsername" id="answerUsername" readonly="readonly"/>
+					</div>
+					<label class="col-sm-1 control-label no-padding-right" for="answerTitle">标题</label>
+					<div class="col-sm-1">
+					    <input type="text" name="answerTitle" id="answerTitle" readonly="readonly"/>
+					</div>
+					<label class="col-sm-1 control-label no-padding-right" for="answerType1">类型</label>
+					<div class="col-sm-1">
+					    <input type="text" name="answerType1" id="answerType1" readonly="readonly"/>
+					</div>
+					
+				</div>
+				<div class="form-group" style="margin-bottom: 5px;" id="dscore">
+					
+				</div>
+		</div>
+		<table class="table">
+			<caption>指导语:
+				您需要根据所评价人的观察和了解,依据描述的符合程度,请回答调查的内容，问卷的填写是保密和匿名的,除用作统计分析外，不向其它部门和个人公示。
+				收集完评估问卷后,我们将对问卷分析并将综合考评结果反馈给调查者本人。您的反馈能帮助他成为一位更富效率的管理者和领导，请您抽时间认真完成。分值，5分：非常优秀，他在工作中正是如此表现的，在此方面堪为公司的楷模。4分：比较优秀，描述和他的日常工作行为吻合，极少出现不一致的情况。3分：基本符合：大部分符合其工作行为，但有时会有不一致的情况。2分：有些不符合，其工作行为和描述存在一定差异。1分：完全不符合，其工作行为和描述完全相反。0分：不清楚:与被评价人工作关系较少，无法评价。</caption>
+			<thead>
+				<tr>
+					<th>项目调查</th>
+					<th>权重</th>
+					<th>调查内容</th>
+					<th>评分</th>
+					<th>得分</th>
+				</tr>
+			</thead>
+			<tbody id="t_question">
+				
+			</tbody>
+		</table>
+		<div class="col-xs-12">
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">
+							提交<i class="ace-icon fa fa-check bigger-110"></i>
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">
+							取消<i class="ace-icon fa fa-undo bigger-110"></i>
+						</button>
+					</div>
+				</div>
+			
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	</form>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css"
+	class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script rc="../static/plugin/ajaxfileupload/ajaxfileupload.js"></script>
+<script src="../static/js/answer_edit_one.js"></script>

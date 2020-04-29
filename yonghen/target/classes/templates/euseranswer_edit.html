@@ -1,0 +1,100 @@
+<div class="page-content">
+	<div class="page-header" id="adheader">
+		
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="advertisementForm">
+				<input type="hidden" name="aUserid" id="aUserid"/>
+				<input type="hidden" name="aId" id="aId"/>
+				<input type="hidden" name="aUsername" id="aUsername"/>
+				<input type="hidden" name="aYiAdmin" id="aYiAdmin"/>
+				<input type="hidden" name="aErAdmin" id="aErAdmin"/>
+				<input type="hidden" name="aSanAdmin" id="aSanAdmin"/>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="A_USERNAME" style="width:25%;" >被考核人</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="A_USERNAME" id="A_USERNAME" style="width:100%;"  readonly="readonly"/>
+					</div>
+				</div>	
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aTitle" style="width:25%;">考核标题</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="aTitle" id="aTitle" style="width:100%;"/>
+					</div>
+				</div>	
+			
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aYiAdminid" style="width:25%;">上级考核人</label>
+					<div class="col-sm-9">
+					    <front id="a1"></front><select class="col-xs-10 col-sm-3 multiselect" multiple="multiple"  id="aYiAdminid" name="aYiAdminid" style="width:100%;">
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aErAdminid" style="width:25%;">平级考核人</label>
+					<div class="col-sm-9">
+						<front id="a2"></front><select class="col-xs-10 col-sm-3 multiselect" multiple="multiple"  id="aErAdminid" name="aErAdminid" style="width:100%;">
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aSanAdminid" style="width:25%;">下级考核人</label>
+					<div class="col-sm-9">
+						<front id="a3"></front><select class="col-xs-10 col-sm-3 multiselect" multiple="multiple" id="aSanAdminid" name="aSanAdminid" style="width:100%;">
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aYiScore" style="width:25%;">上级评分</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" readonly="readonly" name="aYiScore" id="aYiScore" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aErScore" style="width:25%;">同级评分</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" readonly="readonly" name="aErScore" id="aErScore" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="aSanScore" style="width:25%;">下级评分</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" readonly="readonly" name="aSanScore" id="aSanScore" style="width:100%;"/>
+					</div>
+				</div>
+				
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">保存<i class="ace-icon fa fa-check bigger-110"></i></button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">取消<i class="ace-icon fa fa-undo bigger-110"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/assets/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="../static/assets/css/bootstrap-multiselect.css" />
+<script src="../static/js/euseranswer_edit.js"></script>

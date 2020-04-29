@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>layer弹出窗 示例</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="layer.js"></script>
+
+  </head>
+  
+  <body>
+    <input id="btn" type="button" value="弹出iframe层">
+  </body>
+</html>
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				var index=layer.open({
+					  type: 2,
+					  title: 'layer mobile页',
+					  shadeClose: true,
+					  shade: 0.8,
+					  area: ['380px', '90%'],
+					  content: 'MyHtml.html' //iframe的url
+					}); 
+				/* layer.iframeAuto(index);  //会导致在firefox中高度计算错误，只显示标题，内容无法加载出来*/
+			});
+		});
+	</script>

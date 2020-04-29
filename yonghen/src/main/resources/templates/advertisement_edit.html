@@ -1,0 +1,118 @@
+<style>
+.addimg{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    background-color: #ddd;
+    color: #999;
+    margin-right: 20px
+}
+.addimg_file{
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+}
+.Img_outer{
+    position: relative;
+    display: inline-block;
+}
+.Img_delete{
+    position: absolute;
+    font-size: 14px;
+    line-height: 15px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #ccc;
+    top: -7px;
+    right: -7px;
+    border-radius: 50%;
+    display: none;
+    text-align:center
+}
+.img_above{
+    width: 100px;
+    margin-right: 10px;
+}
+</style>
+<div class="page-content">
+	<div class="page-header" id="adheader">
+		
+	</div>
+	<!-- /.page-header -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" id="advertisementForm">
+				<input type="hidden" name="advertisementId" id="advertisementId"/>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="advertisementName" style="width:25%;">名称</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="advertisementName" id="advertisementName" style="width:100%;"/>
+					</div>
+				</div>	
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="adImg" style="width:25%;">图片</label>
+					<div class="col-sm-9">
+						<div class="addimg">+</div>
+						<input type="file" class="addimg_file" id="fileActivityImg" name="fileActivityImg" accept="image/*" />
+						<p class="help-block">支持JPG、PNG、JPEG、GIF、BMP、PIC格式，最佳比例1:1.</p>
+						<div id="adImg">
+						
+         				</div>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="advertisementStatus" style="width:25%;">状态</label>
+					<div class="col-sm-9">
+						<select class="col-xs-10 col-sm-5" id="advertisementStatus" name="advertisementStatus" style="width:100%;">
+							<option value="1">可用</option>
+							<option value="0">不可用</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="advertisementSort" style="width:25%;">排序</label>
+					<div class="col-sm-9">
+						<input type="number" class="col-xs-10 col-sm-5" name="advertisementSort" id="advertisementSort" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="form-group" style="width:50%;margin-bottom: 5px;">
+					<label class="col-sm-3 control-label no-padding-right" for="advertisementDesc" style="width:25%;">详情</label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-5" name="advertisementDesc" id="advertisementDesc" style="width:100%;"/>
+					</div>
+				</div>
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn btn-info" id="submitbtn">保存<i class="ace-icon fa fa-check bigger-110"></i></button>
+						&nbsp; &nbsp; &nbsp;
+						<button type="button" class="btn" id="cancelbtn">取消<i class="ace-icon fa fa-undo bigger-110"></i></button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.main-content -->
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<script src="../static/assets/js/jquery-2.0.3.min.js"></script>
+<script src="../static/assets/js/jquery.validate.min.js"></script>
+<script src="../static/assets/js/bootstrap.min.js"></script>
+<script src="../static/assets/js/ace-elements.min.js"></script>
+<script src="../static/assets/js/ace.min.js"></script>
+<script src="../static/assets/js/layer-v1.9.3/layer.js"></script>
+<script src="../static/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script rc="../static/plugin/ajaxfileupload/ajaxfileupload.js"></script>
+<script src="../static/js/advertisement_edit.js"></script>

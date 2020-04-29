@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanwang.project.dao.EQuestionMapper">
+  <resultMap id="BaseResultMap" type="com.nanwang.project.model.EQuestion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="QUESTION_ID" jdbcType="VARCHAR" property="questionId" />
+    <result column="QUESTION_TITLE" jdbcType="VARCHAR" property="questionTitle" />
+    <result column="QUESTION_WEIGHTED" jdbcType="INTEGER" property="questionWeighted" />
+    <result column="QUESTION_TYPEID" jdbcType="VARCHAR" property="questionTypeid" />
+    <result column="QUESTION_TYPENAME" jdbcType="VARCHAR" property="questionTypename" />
+    <result column="QUESTION_CREATE_TIME" jdbcType="TIMESTAMP" property="questionCreateTime" />
+    <result column="QUESTION_CREATE_USER" jdbcType="VARCHAR" property="questionCreateUser" />
+    <result column="QUESTION_STATUS" jdbcType="INTEGER" property="questionStatus" />
+    <result column="QUESTION_TYPES" jdbcType="INTEGER" property="questionTypes" />
+    <result column="QUESTION_SORT" jdbcType="INTEGER" property="questionSort" />
+  </resultMap>
+</mapper>

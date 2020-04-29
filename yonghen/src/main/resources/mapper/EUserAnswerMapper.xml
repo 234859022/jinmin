@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanwang.project.dao.EUserAnswerMapper">
+  <resultMap id="BaseResultMap" type="com.nanwang.project.model.EUserAnswer">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="A_ID" jdbcType="VARCHAR" property="aId" />
+    <result column="A_USERNAME" jdbcType="VARCHAR" property="aUsername" />
+    <result column="A_USERID" jdbcType="VARCHAR" property="aUserid" />
+    <result column="A_YI_ADMIN" jdbcType="VARCHAR" property="aYiAdmin" />
+    <result column="A_YI_ADMINID" jdbcType="VARCHAR" property="aYiAdminid" />
+    <result column="A_YI_STATUS" jdbcType="INTEGER" property="aYiStatus" />
+    <result column="A_ER_ADMIN" jdbcType="VARCHAR" property="aErAdmin" />
+    <result column="A_ER_ADMINID" jdbcType="VARCHAR" property="aErAdminid" />
+    <result column="A_ER_STATUS" jdbcType="INTEGER" property="aErStatus" />
+    <result column="A_SAN_ADMIN" jdbcType="VARCHAR" property="aSanAdmin" />
+    <result column="A_SAN_ADMINID" jdbcType="VARCHAR" property="aSanAdminid" />
+    <result column="A_SAN_SATATUS" jdbcType="INTEGER" property="aSanSatatus" />
+    <result column="A_STATUS" jdbcType="INTEGER" property="aStatus" />
+    <result column="A_SCORE" jdbcType="DECIMAL" property="aScore" />
+    <result column="A_CREATE_TIME" jdbcType="TIMESTAMP" property="aCreateTime" />
+    <result column="A_CREATE_USER" jdbcType="VARCHAR" property="aCreateUser" />
+    <result column="A_CREATE_USERID" jdbcType="VARCHAR" property="aCreateUserid" />
+    <result column="A_YI_SCORE" jdbcType="DECIMAL" property="aYiScore" />
+    <result column="A_ER_SCORE" jdbcType="DECIMAL" property="aErScore" />
+    <result column="A_SAN_SCORE" jdbcType="DECIMAL" property="aSanScore" />
+    <result column="A_TITLE" jdbcType="VARCHAR" property="aTitle" />
+    <result column="A_YI_SCORES" jdbcType="VARCHAR" property="aYiScores" />
+    <result column="A_YI_COUNT" jdbcType="INTEGER" property="aYiCount" />
+    <result column="A_ER_SCORES" jdbcType="VARCHAR" property="aErScores" />
+    <result column="A_ER_COUNT" jdbcType="INTEGER" property="aErCount" />
+    <result column="A_SAN_SCORES" jdbcType="VARCHAR" property="aSanScores" />
+    <result column="A_SAN_COUNT" jdbcType="INTEGER" property="aSanCount" />
+    <result column="A_MY_ADMINID" jdbcType="VARCHAR" property="aMyAdminid" />
+    <result column="A_MY_SCORE" jdbcType="DECIMAL" property="aMyScore" />
+    <result column="A_MY_STATUS" jdbcType="INTEGER" property="aMyStatus" />
+  </resultMap>
+</mapper>

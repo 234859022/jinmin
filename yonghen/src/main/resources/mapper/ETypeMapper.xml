@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanwang.project.dao.ETypeMapper">
+  <resultMap id="BaseResultMap" type="com.nanwang.project.model.EType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="TYPE_ID" jdbcType="VARCHAR" property="typeId" />
+    <result column="TYPE_NAME" jdbcType="VARCHAR" property="typeName" />
+    <result column="TYPE_DETAIL" jdbcType="VARCHAR" property="typeDetail" />
+    <result column="TYPE_CREATE_TIME" jdbcType="TIMESTAMP" property="typeCreateTime" />
+    <result column="TYPE_CREATE_USER" jdbcType="VARCHAR" property="typeCreateUser" />
+    <result column="TYPE_SORT" jdbcType="INTEGER" property="typeSort" />
+    <result column="TYPE_STATUS" jdbcType="INTEGER" property="typeStatus" />
+  </resultMap>
+</mapper>
