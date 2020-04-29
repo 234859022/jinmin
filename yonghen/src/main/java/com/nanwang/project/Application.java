@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 /**
  * @ClassName: Application
- * @Description: TODO(描述)
+ * @Description:运行个毛线
  * @author chenjinmin
  * @date 2020-04-29 11:59:31
  */
